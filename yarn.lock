@@ -1143,6 +1143,11 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
+"@juggle/resize-observer@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.3.1.tgz#b50a781709c81e10701004214340f25475a171a0"
+  integrity sha512-zMM9Ds+SawiUkakS7y94Ymqx+S0ORzpG3frZirN3l+UlXUmSUR7hF4wxCVqW+ei94JzV5kt0uXBcoOEAuiydrw==
+
 "@ngtools/webpack@12.0.2":
   version "12.0.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-12.0.2.tgz#61163756b970812c9b6c203f93c943a1ac8a2018"
@@ -2932,6 +2937,14 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
+
+echarts@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/echarts/-/echarts-5.1.1.tgz#b186f162f017c555cfd67b12ede6762bdc3ddfda"
+  integrity sha512-b3nP8M9XwZM2jISuA+fP0EuJv8lcfgWrinel185Npy8bE/UhXTDIPJcqgQOCWdvk0c5CeT6Dsm1xBjmJXAGlxQ==
+  dependencies:
+    tslib "2.0.3"
+    zrender "5.1.0"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -4984,6 +4997,13 @@ next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+
+ngx-echarts@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-echarts/-/ngx-echarts-7.0.1.tgz#1bd810b5fdab475dd67170b22528d262bdecfe19"
+  integrity sha512-DDRwEssQRjjgPElEjF1emORoUEnF6OMZ20xnQBLueSHitM7XnIUErYVe9GMmm/jCtI+iPvJPEedyxMPl62nHLw==
+  dependencies:
+    tslib "^2.0.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -7271,6 +7291,11 @@ tree-kill@1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
+tslib@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
+  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+
 tslib@2.2.0, tslib@^2.0.0, tslib@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
@@ -7826,3 +7851,10 @@ zone.js@~0.11.4:
   integrity sha512-DDh2Ab+A/B+9mJyajPjHFPWfYU1H+pdun4wnnk0OcQTNjem1XQSZ2CDW+rfZEUDjv5M19SBqAkjZi0x5wuB5Qw==
   dependencies:
     tslib "^2.0.0"
+
+zrender@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/zrender/-/zrender-5.1.0.tgz#b6a84c3aa7ccc6642ee0519901ca4c0835c4d85e"
+  integrity sha512-c+8VRx52ycbmqwHeHLlo/BAfIHBl/JZNLM6cfDQFgzIH05yb+f5J9F/fbRsP+zGc8dW9XHuhdt8/iqukgMZSeg==
+  dependencies:
+    tslib "2.0.3"

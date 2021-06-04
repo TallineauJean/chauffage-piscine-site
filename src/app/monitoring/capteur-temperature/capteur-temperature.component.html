@@ -1,4 +1,4 @@
 <mat-card class="capteur-temperature">
-  <mat-card-title>Capteur température X</mat-card-title>
   <mat-card-content>{{temp}}</mat-card-content>
+  <div *ngIf="dataService.data$ | async" echarts [options]="options" class="demo-chart"></div>
 </mat-card>

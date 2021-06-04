@@ -34,11 +34,9 @@ export class DataService {
 
   onMessage() {
     return ({data}: any) => {
-      console.log('On event -> ', data);
+     // console.log('On event -> ', data);
       const [temperatureEntreeEau, temperatureSortieEau, temperatureAir] = data.split(';');
       this.dataSubject$.next({temperatureEntreeEau, temperatureSortieEau, temperatureAir});
     }
-
   }
-
 }
