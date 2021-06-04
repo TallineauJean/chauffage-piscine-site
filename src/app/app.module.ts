@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {CommonModule} from "@angular/common";
 
 const modulesAngularMaterial = [
   MatToolbarModule,
@@ -17,6 +18,7 @@ const modulesAngularMaterial = [
   imports: [
     AppRoutingModule,
     BrowserModule,
+    CommonModule,
     NoopAnimationsModule,
     ...modulesAngularMaterial
   ],
