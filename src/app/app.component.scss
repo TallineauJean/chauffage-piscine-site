@@ -1,8 +1,11 @@
 .main-container {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-flow: column;
 
   .content {
     padding: 8px 4px 8px 4px;
+    flex: 1;
   }
 }

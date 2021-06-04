@@ -38,11 +38,15 @@ export class CapteurTemperatureComponent implements OnInit {
         itemStyle: {
           color: '#91e9ff'
         },
+        progress: {
+          show: false,
+          width: 10
+        },
         pointer: {
           icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
           length: '12%',
-          width: 10,
-          offsetCenter: [0, '-60%'],
+          width: 8,
+          offsetCenter: [0, '-70%'],
           itemStyle: {
             color: 'auto'
           }
@@ -94,6 +98,9 @@ export class CapteurTemperatureComponent implements OnInit {
             ]
           }
         },
+        splitLine: {
+          show: false,
+        },
         axisLabel: {
           show: false,
         },
@@ -102,7 +109,7 @@ export class CapteurTemperatureComponent implements OnInit {
         },
         title: {
           offsetCenter: [0, '-40%'],
-          fontSize: 10,
+          fontSize: 15,
           value: 'test'
         },
         detail: {
@@ -118,14 +125,14 @@ export class CapteurTemperatureComponent implements OnInit {
         },
         data: [{
           value: 0
-        }]
+        }],
+        radius: "120%"
       }],
     };
 
     if(this.temperature === "temperatureAir") this.options.series[0].data[0].name = 'Temp. air';
-    if(this.temperature === "temperatureEntreeEau") this.options.series[0].data[0].name = 'Temp. eau 1';
-    if(this.temperature === "temperatureSortieEau") this.options.series[0].data[0].name = 'Temp. eau 2';
-    this.options
+    if(this.temperature === "temperatureEntreeEau") this.options.series[0].data[0].name = 'Temp. eau entrée';
+    if(this.temperature === "temperatureSortieEau") this.options.series[0].data[0].name = 'Temp. eau sortie';
 
     this.dataService.data$.pipe(
       map((data: any) => data && data[this.temperature])

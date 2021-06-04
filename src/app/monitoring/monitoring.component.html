@@ -1,17 +1,13 @@
 <div class="monitoring">
-  <app-capteur-temperature [temperature]="'temperatureEntreeEau'"></app-capteur-temperature>
-  <app-capteur-temperature [temperature]="'temperatureSortieEau'"></app-capteur-temperature>
-  <app-capteur-temperature [temperature]="'temperatureAir'"></app-capteur-temperature>
-
-<!--  <mat-grid-list cols="1" rowHeight="3:1">-->
-<!--    <mat-grid-tile>-->
-<!--     -->
-<!--    </mat-grid-tile>-->
-<!--    <mat-grid-tile>-->
-<!--      -->
-<!--    </mat-grid-tile>-->
-<!--    <mat-grid-tile>-->
-<!--     -->
-<!--    </mat-grid-tile>-->
-<!--  </mat-grid-list>-->
+  <mat-grid-list class="grille" cols="1" rowHeight="2:1">
+    <mat-grid-tile>
+      <app-capteur-temperature [temperature]="'temperatureEntreeEau'"></app-capteur-temperature>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-capteur-temperature [temperature]="'temperatureSortieEau'"></app-capteur-temperature>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-capteur-temperature [temperature]="'temperatureAir'"></app-capteur-temperature>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
