@@ -1,4 +1,6 @@
 <mat-card class="capteur-temperature">
-  <mat-card-title>Capteur température X</mat-card-title>
-  <mat-card-content>{{temp}}</mat-card-content>
+  <mat-card-content>
+    <h2>{{titre}} </h2>
+    <p class="temperature">{{temperature | temperature}}</p>
+  </mat-card-content>
 </mat-card>

@@ -9,20 +9,24 @@ import {map, tap} from "rxjs/operators";
 })
 export class CapteurTemperatureComponent implements OnInit {
 
-  @Input() temperature: string = '';
+  @Input() typeSonde!: string;
 
-  // @ts-ignore
-  public temp: number
+  public temperature!: string
+  public titre!: string;
 
   constructor(public readonly dataService: DataService) {
   }
 
   ngOnInit(): void {
+    if(this.typeSonde === "temperatureAir") this.titre = 'Température air';
+    if(this.typeSonde === "temperatureEntreeEau") this.titre = 'Température piscine';
+    if(this.typeSonde === "temperatureSortieEau") this.titre = 'Température sortie chauffage';
+
+
     this.dataService.data$.pipe(
-      tap((data) =>  console.log(data)),
-      map((data: any) => data && data[this.temperature])
+      map((data: any) => data && data[this.typeSonde])
     ).subscribe((temp) => {
-      this.temp = temp;
+      this.temperature = temp;
     });
   }
 

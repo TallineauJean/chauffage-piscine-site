@@ -1,3 +1,19 @@
 .capteur-temperature {
 
+  box-shadow: inset -1px -1px 1px 1px rgb(0 0 0 / 50%);
+
+  .temperature {
+    display: flex;
+    font-size : x-large;
+    justify-content: space-evenly;
+  }
+
+  .chaleur {
+    background-color: orange;
+    position: absolute;
+    top: 23px;
+    left: 48px;
+    height: 44px;
+    width: 8px;
+  }
 }
