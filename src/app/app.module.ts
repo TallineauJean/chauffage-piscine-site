@@ -6,9 +6,11 @@ import {AppComponent} from './app.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {CommonModule} from "@angular/common";
+import {MatIconModule} from "@angular/material/icon";
 
 const modulesAngularMaterial = [
   MatToolbarModule,
+  MatIconModule
 ]
 
 @NgModule({

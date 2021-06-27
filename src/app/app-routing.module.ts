@@ -3,9 +3,13 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'accueil',
     loadChildren: () => import('./monitoring/monitoring.module').then(m => m.MonitoringModule)
-  }
+  },
+  {
+    path: 'configuration',
+    loadChildren: () => import('./configuration/configuration.module').then(m => m.ConfigurationModule)
+  },
 ];
 
 @NgModule({

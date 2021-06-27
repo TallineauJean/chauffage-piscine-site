@@ -1,4 +1,9 @@
 .monitoring {
+  .statut-pompes {
+    display: flex;
+  }
+
+
   app-capteur-temperature {
     flex: 1;
     height: 100%;
@@ -7,4 +12,5 @@
   .etat-pompe {
     height: 30px;
   }
+
 }

@@ -1,7 +1,9 @@
-<div  class="main-container">
+<div class="main-container">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Ma piscine</span>
+      <mat-icon [routerLink]="'accueil'" class="icone">home</mat-icon>
+      <span class="spacer"></span>
+      <mat-icon class="icone" [routerLink]="'configuration'">build</mat-icon>
     </mat-toolbar-row>
   </mat-toolbar>
 

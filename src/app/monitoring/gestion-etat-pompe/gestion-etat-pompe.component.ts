@@ -31,12 +31,10 @@ export class GestionEtatPompeComponent implements OnInit {
   ngOnInit(): void {
     this.etatPompe$ = this.dataService.data$.pipe(
       map((data: Data) => {
-        console.log(data);
         return this._pompe === Pompes.PISCINE
           ? data.isPompePiscineEnMarche
           : data.isPompeChauffageEnMarche
-      }),
-      tap((data => {console.log(data)}))
+      })
     );
   }
 
