@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MatSlideToggleChange} from "@angular/material/slide-toggle";
-import {PompeService} from "../../shared/services/pompe/pompe.service";
-import {Pompes} from "../../shared/enum/pompes";
-import {WebSocketService} from "../../shared/services/ws/web-socket.service";
-import {Data} from "../../shared/model/data.model";
+import {PompeService} from "../../../shared/services/pompe/pompe.service";
+import {Pompes} from "../../../shared/enum/pompes";
+import {WebSocketService} from "../../../shared/services/ws/web-socket.service";
+import {Data} from "../../../shared/model/data.model";
 import {map, tap} from "rxjs/operators";
 import {Observable} from "rxjs";
 
