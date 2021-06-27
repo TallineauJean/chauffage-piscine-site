@@ -1,13 +1,10 @@
 <div class="monitoring">
+  <div class="statut-pompes">
+    <app-statut-pompe [pompe]="0"></app-statut-pompe>
+    <app-statut-pompe [pompe]="1"></app-statut-pompe>
+  </div>
+
   <mat-grid-list cols="1" rowHeight="3:1">
-    <mat-grid-tile>
-      <div>
-        <app-statut-pompe [pompe]="0"></app-statut-pompe>
-      </div>
-      <div>
-        <app-statut-pompe [pompe]="1"></app-statut-pompe>
-      </div>
-    </mat-grid-tile>
     <mat-grid-tile>
       <app-capteur-temperature [typeSonde]="'temperatureEntreeEau'"></app-capteur-temperature>
     </mat-grid-tile>

@@ -5,13 +5,13 @@
   justify-content: space-evenly;
 
   .pompe {
-    background-image: url('~src/assets/icones/pompe-inactive.png');
+    background-image: url('~src/assets/pompe-inactive.png');
     background-size: cover;
     width: 25px;
     height: 25px;
 
     &.active {
-      background-image: url('~src/assets/icones/pompe-active.png');
+      background-image: url('~src/assets/pompe-active.png');
       animation: spin 3s infinite;
       animation-timing-function: linear;
     }
