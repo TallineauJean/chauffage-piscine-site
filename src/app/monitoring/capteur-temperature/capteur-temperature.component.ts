@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DataService} from "../../shared/services/data.service";
+import {WebSocketService} from "../../shared/services/ws/web-socket.service";
 import {map, tap} from "rxjs/operators";
 
 @Component({
@@ -14,7 +14,7 @@ export class CapteurTemperatureComponent implements OnInit {
   public temperature!: string
   public titre!: string;
 
-  constructor(public readonly dataService: DataService) {
+  constructor(public readonly dataService: WebSocketService) {
   }
 
   ngOnInit(): void {

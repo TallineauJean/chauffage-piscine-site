@@ -1,15 +1,19 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {DataService} from "./services/data.service";
+import {WebSocketService} from "./services/ws/web-socket.service";
+import {PompeService} from "./services/pompe/pompe.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [],
   providers: [
-    DataService
+    WebSocketService,
+    PompeService
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ]
 })
 export class SharedModule {

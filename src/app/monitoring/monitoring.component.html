@@ -1,13 +1,21 @@
 <div class="monitoring">
   <mat-grid-list cols="1" rowHeight="3:1">
     <mat-grid-tile>
-        <app-capteur-temperature [typeSonde]="'temperatureEntreeEau'"></app-capteur-temperature>
+      <app-gestion-etat-pompe [pompe]="0"></app-gestion-etat-pompe>
+      <app-gestion-etat-pompe [pompe]="1"></app-gestion-etat-pompe>
     </mat-grid-tile>
     <mat-grid-tile>
-        <app-capteur-temperature [typeSonde]="'temperatureSortieEau'"></app-capteur-temperature>
+      <app-capteur-temperature [typeSonde]="'temperatureEntreeEau'"></app-capteur-temperature>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-capteur-temperature [typeSonde]="'temperatureSortieEau'"></app-capteur-temperature>
     </mat-grid-tile>
     <mat-grid-tile>
       <app-capteur-temperature [typeSonde]="'temperatureAir'"></app-capteur-temperature>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+
+
+
+

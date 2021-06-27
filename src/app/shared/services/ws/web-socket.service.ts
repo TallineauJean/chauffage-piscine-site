@@ -1,25 +1,25 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from "rxjs";
+import {Data} from "../../model/data.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class WebSocketService {
 
-  private dataSubject$: BehaviorSubject<any>;
+  private dataSubject$: BehaviorSubject<Data>;
   public data$: Observable<any>;
 
   private websocket: WebSocket = new WebSocket(`ws://192.168.1.22/ws`);
 
   constructor() {
     console.log('Trying to open a WebSocket connection...');
-
     this.dataSubject$ = new BehaviorSubject<any>({});
     this.data$ = this.dataSubject$.asObservable();
 
     this.websocket.onopen = this.onOpen();
     this.websocket.onclose = this.onClose;
-    this.websocket.onmessage = this.onMessage(); // <-- add this line
+    this.websocket.onmessage = this.onMessage();
   }
 
   onOpen() {
@@ -34,11 +34,16 @@ export class DataService {
 
   onMessage() {
     return ({data}: any) => {
-      console.log('On event -> ', data);
-      const [temperatureEntreeEau, temperatureSortieEau, temperatureAir] = data.split(';');
-      this.dataSubject$.next({temperatureEntreeEau, temperatureSortieEau, temperatureAir});
+      const [temperatureEntreeEau, temperatureSortieEau, temperatureAir, isPompePiscineEnMarche, isPompeChauffageEnMarche] = data.split(';');
+      const donnees: Data = {
+        temperatureEntreeEau,
+        temperatureSortieEau,
+        temperatureAir,
+        isPompePiscineEnMarche: isPompePiscineEnMarche !== "0",
+        isPompeChauffageEnMarche: isPompeChauffageEnMarche !== "0"
+      }
+      this.dataSubject$.next(donnees);
     }
-
   }
 
 }
